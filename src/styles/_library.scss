@@ -1,0 +1,78 @@
+.library {
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-radius: 1rem;
+  width: 20rem;
+  height: 100%;
+  background-color: white;
+  box-shadow: 2px 2px 50px rgb(205, 204, 204);
+  overflow-y: scroll;
+  transform: translate(-100%);
+  transition: all 0.5s ease;
+  opacity: 0;
+  h2 {
+    padding: 2rem;
+  }
+}
+.library-song {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  // flex-direction: column;
+  padding: 1rem 2rem 1rem 2rem;
+  transition: all 0.75s ease-out;
+  cursor: pointer;
+  img {
+    max-width: 30%;
+  }
+  &:hover {
+    background-color: gainsboro;
+  }
+}
+.song-descriptions {
+  // display: flex;
+  // flex-direction: column;
+  padding-left: 1rem;
+  h3 {
+    font-size: 1rem;
+  }
+  h4 {
+    font-size: 0.7rem;
+  }
+}
+
+/* The emerging W3C standard
+   that is currently Firefox-only */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(155, 155, 155, 0.7) transparent;
+}
+
+/* Works on Chrome/Edge/Safari */
+*::-webkit-scrollbar {
+  width: 5px;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(155, 155, 155, 0.7);
+  border-radius: 20px;
+  border: transparent;
+}
+
+.selected {
+  background-color: rgba(155, 155, 155, 0.7);
+}
+
+.active-library {
+  transform: translate(0);
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .library {
+    width: 100%;
+  }
+}
